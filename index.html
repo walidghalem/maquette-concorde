@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1f3a33">
+<meta name="robots" content="noindex, nofollow">
+<title>Hôtel Concorde · Oran · Réservation en ligne</title>
+<meta name="description" content="Hôtel Concorde, rond-point Dar El Beida, Oran. Chambres individuelles, doubles et triples, petit-déjeuner, parking. Réservez et payez par CIB ou Edahabia, à toute heure.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --wood:#1f3a33;--wood-dk:#162b25;--wood-lt:#2b4b42;--wood-line:#35574d;
+  --brass:#b8893a;--brass-hi:#e6c27a;--brass-lo:#7a571d;
+  --plaster:#ecebe6;--plaster-dk:#dcdad2;--ink:#14211d;
+  --on-wood:#eef0ea;--on-wood-2:#b4c7bf;--on-plaster-2:#4a5a54;
+  --taken:#8e2f2a;
+  --display:'Marcellus',Georgia,serif;--ui:'Hanken Grotesk',system-ui,sans-serif;
+  --brass-face:linear-gradient(160deg,#f0d495 0%,#c99a45 38%,#a77a2f 62%,#e2bd73 100%);
+  --ease:cubic-bezier(.16,1,.3,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--wood);scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font:400 16px/1.55 var(--ui);color:var(--on-wood);-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent}
+::selection{background:var(--brass-hi);color:var(--ink)}
+a{color:inherit;text-underline-offset:4px;text-decoration-thickness:1px}
+:focus-visible{outline:2px solid var(--brass-hi);outline-offset:3px}
+img{display:block;max-width:100%}
+button,input,select{font:inherit;color:inherit}
+.num{font-variant-numeric:lining-nums tabular-nums}
+.wrap{width:min(1240px,100% - 48px);margin-inline:auto}
+.ico{width:20px;height:20px;flex:none;stroke:currentColor;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.note{font-size:12.5px;color:var(--on-wood-2)}
+.plaster .note{color:var(--on-plaster-2)}
+
+/* Plaque: the brass component every title, number and action shares */
+.plaque{display:inline-flex;align-items:center;gap:10px;background:var(--brass-face);color:#2a1c06;border-radius:3px;padding:6px 14px;font-family:var(--display);letter-spacing:.08em;box-shadow:inset 0 1px 0 rgba(255,244,214,.7),inset 0 -1px 0 rgba(90,60,14,.6),0 2px 4px rgba(0,0,0,.25);position:relative}
+.plaque::before,.plaque::after{content:"";width:5px;height:5px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff3cf,#8a6420 70%);flex:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border:0;border-radius:3px;background:var(--brass-face);color:#24180a;font-weight:600;font-size:16px;cursor:pointer;text-decoration:none;box-shadow:inset 0 1px 0 rgba(255,244,214,.7),inset 0 -2px 0 rgba(90,60,14,.5),0 6px 14px -6px rgba(0,0,0,.5);transition:transform .2s var(--ease),filter .2s}
+.btn:hover{filter:brightness(1.06)}
+.btn:active{transform:translateY(1px)}
+.btn.ghost{background:transparent;color:var(--brass-hi);box-shadow:inset 0 0 0 1px var(--brass)}
+
+/* Header */
+.top{display:flex;align-items:center;gap:28px;padding-block:18px;border-bottom:1px solid var(--wood-line)}
+.mark{font-size:20px;padding:7px 16px;text-decoration:none}
+.nav{display:flex;gap:26px;font-size:15px;color:var(--on-wood-2)}
+.nav a{text-decoration:none}.nav a:hover{color:var(--on-wood)}
+.top-end{margin-left:auto;display:flex;align-items:center;gap:22px;font-size:14px}
+.langs{display:flex;gap:2px;border:1px solid var(--wood-line);border-radius:3px;padding:2px}
+.langs button{background:none;border:0;padding:4px 10px;border-radius:2px;cursor:pointer;color:var(--on-wood-2)}
+.langs button[aria-pressed=true]{background:var(--wood-lt);color:var(--on-wood)}
+.langs button[lang=ar]{font-size:15px}
+.open24{display:flex;align-items:center;gap:8px;color:var(--brass-hi)}
+.open24 i{width:8px;height:8px;border-radius:50%;background:#7fd18f;box-shadow:0 0 0 3px rgba(127,209,143,.18)}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:56px;align-items:end;padding-top:44px}
+.hero h1{font-family:var(--display);font-weight:400;font-size:clamp(38px,4.3vw,58px);line-height:1.04;letter-spacing:-.01em;text-wrap:balance}
+.hero h1 em{font-style:normal;color:var(--brass-hi)}
+.hero .sub{margin-top:16px;color:var(--on-wood-2);max-width:44ch;font-size:17px}
+.book{margin-top:26px;display:grid;grid-template-columns:1fr 1fr 96px;gap:1px;background:var(--wood-line);border:1px solid var(--wood-line);border-radius:3px;overflow:hidden}
+.field{background:var(--wood-dk);padding:10px 14px 9px;display:flex;flex-direction:column;gap:2px}
+.field label{font-size:12px;color:var(--on-wood-2)}
+.field input,.field select{background:none;border:0;font-size:17px;color:var(--on-wood);outline:none;color-scheme:dark;width:100%;font-variant-numeric:tabular-nums}
+.field select option{background:var(--wood-dk)}
+.book .btn{grid-column:1/-1;border-radius:0;min-height:56px}
+.book-meta{display:flex;flex-wrap:wrap;gap:4px 16px;justify-content:space-between;margin-top:10px;font-size:13.5px;color:var(--on-wood-2)}
+.book-meta b{color:var(--brass-hi);font-weight:500}
+
+/* Corridor of doors */
+.corridor{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding:22px 22px 0;background:linear-gradient(#244238,#1b342d);border:1px solid var(--wood-line);border-bottom:0;border-radius:3px 3px 0 0;perspective:1400px}
+.corridor::after{content:"";position:absolute;left:0;right:0;bottom:0;height:10px;background:linear-gradient(#5c4320,#3a2a12)}
+.door{position:relative;aspect-ratio:9/19;max-height:430px;background:var(--wood-dk);border:0;padding:0;cursor:pointer;text-align:center;border-radius:2px 2px 0 0}
+.door:disabled{cursor:default}
+.leaf{position:absolute;inset:0;background:#2e5247;border-radius:2px 2px 0 0;transform-origin:left center;transition:transform .9s var(--ease);box-shadow:inset 0 0 0 6px #284a40,inset 0 0 0 7px #1d3a32;display:flex;flex-direction:column;align-items:center;padding-top:16%}
+.leaf::before,.leaf::after{content:"";position:absolute;left:16%;right:16%;border:1px solid #1d3a32;box-shadow:inset 0 0 0 4px #315a4e,inset 0 0 0 5px #234238}
+.leaf::before{top:30%;height:26%}
+.leaf::after{top:62%;height:30%}
+.door.open .leaf{transform:rotateY(-62deg)}
+.inside{position:absolute;inset:0;background:#0f1d19 center/cover;border-radius:2px 2px 0 0}
+.no{font-family:var(--display);font-size:clamp(26px,2.6vw,38px);letter-spacing:.06em;padding:4px 12px 2px;line-height:1.1;z-index:1}
+.knob{position:absolute;right:12%;top:52%;width:20px;height:6px;border-radius:3px;background:var(--brass-face);z-index:2}
+.knob::before{content:"";position:absolute;right:-3px;top:-4px;width:12px;height:12px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff0c4,#9a7026 70%)}
+.tag{position:absolute;right:calc(12% - 22px);top:calc(52% + 6px);width:62px;padding:9px 0 8px;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;border-radius:2px;transform-origin:50% -6px;z-index:3;line-height:1.25}
+.tag::before{content:"";position:absolute;left:50%;top:-6px;width:10px;height:10px;margin-left:-5px;border-radius:50%;border:2px solid currentColor;opacity:.6}
+.tag.free{background:var(--brass-face);color:#2a1c06}
+.tag.taken{background:#efe6d4;color:var(--taken);font-size:9.5px;width:70px;right:calc(12% - 26px)}
+.tag.swing{animation:swing 1.1s var(--ease)}
+@keyframes swing{0%{transform:rotate(26deg)}35%{transform:rotate(-12deg)}65%{transform:rotate(5deg)}100%{transform:rotate(0)}}
+.door .type{position:absolute;left:0;right:0;bottom:14px;font-size:12.5px;color:var(--on-wood-2);z-index:1}
+.door.is-taken .no{filter:saturate(.6) brightness(.85)}
+.door:not(:disabled):hover .leaf{transform:rotateY(-14deg)}
+.door.open:hover .leaf{transform:rotateY(-62deg)}
+.legend{display:flex;justify-content:space-between;gap:16px;padding:12px 0 0;font-size:12.5px;color:var(--on-wood-2)}
+
+.hero>*,.flow>*,.pay>*,.chosen>*,.practical>*,.room>*{min-width:0}
+.price span{flex-basis:100%}
+/* Bands */
+section{scroll-margin-top:0}
+.band{padding-block:56px}
+.plaster{background:var(--plaster);color:var(--ink)}
+.h2{font-family:var(--display);font-weight:400;font-size:clamp(30px,3.2vw,42px);line-height:1.1;letter-spacing:-.005em;text-wrap:balance}
+.lede{margin-top:10px;max-width:60ch;font-size:17px;color:var(--on-plaster-2)}
+.band:not(.plaster) .lede{color:var(--on-wood-2)}
+.head{display:flex;justify-content:space-between;align-items:end;gap:32px}
+
+/* Rooms: three open doors */
+.rooms{margin-top:30px;display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.room{display:grid;grid-template-columns:150px 1fr;gap:20px;align-items:start}
+.frame{aspect-ratio:9/16;background:var(--wood);padding:7px 7px 0;border-radius:2px 2px 0 0;position:relative;box-shadow:0 18px 30px -18px rgba(20,33,29,.6)}
+.frame img{width:100%;height:100%;object-fit:cover}
+.frame .plaque{position:absolute;top:14px;left:50%;transform:translateX(-50%);font-size:15px;padding:3px 9px}
+.room h3{font-family:var(--display);font-weight:400;font-size:24px;line-height:1.15}
+.room .who{font-size:14px;color:var(--on-plaster-2);margin-top:2px}
+.incl{list-style:none;margin-top:12px;font-size:14.5px}
+.incl li{display:flex;gap:10px;align-items:center;padding:6px 0;border-bottom:1px solid var(--plaster-dk)}
+.incl .ico{width:18px;height:18px;color:var(--brass-lo)}
+.price{margin-top:12px;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.price b{font-family:var(--display);font-weight:400;font-size:26px}
+.price span{font-size:13px;color:var(--on-plaster-2)}
+.room .btn{margin-top:12px;min-height:44px;padding:0 18px;font-size:15px}
+
+/* Practical strip */
+.practical{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:start}
+.facts{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:0 28px;margin-top:18px}
+.facts li{display:flex;gap:12px;align-items:center;padding:11px 0;border-bottom:1px solid var(--wood-line)}
+.facts .ico{color:var(--brass-hi)}
+.addr{border:1px solid var(--wood-line);border-radius:3px;padding:26px}
+.addr address{font-style:normal;font-family:var(--display);font-size:24px;line-height:1.3;margin-top:14px}
+.addr p{color:var(--on-wood-2);margin-top:8px}
+.addr .row{display:flex;gap:12px;margin-top:20px;flex-wrap:wrap}
+
+/* Booking steps */
+.flow{display:grid;grid-template-columns:200px minmax(0,1fr) 340px;gap:40px;margin-top:28px;align-items:start}
+.steps{list-style:none;counter-reset:s}
+.steps li{counter-increment:s;display:flex;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--wood-line);color:var(--on-wood-2)}
+.steps li::before{content:counter(s);width:34px;height:34px;display:grid;place-items:center;border:1px solid var(--wood-line);border-radius:50%;font-family:var(--display);font-size:16px}
+.steps li.done::before{content:"✓";font-family:var(--ui);background:var(--wood-lt);color:var(--brass-hi);border-color:var(--wood-lt)}
+.steps li.now{color:var(--on-wood)}
+.steps li.now::before{background:var(--brass-face);color:#2a1c06;border:0}
+.plaster .steps li{border-color:var(--plaster-dk);color:var(--on-plaster-2)}
+.plaster .steps li::before{border-color:#c9c6bc}
+.plaster .steps li.done::before{background:var(--wood);color:var(--brass-hi);border-color:var(--wood)}
+.plaster .steps li.now{color:var(--ink)}
+.chosen{display:grid;grid-template-columns:200px 1fr;gap:26px}
+.chosen .frame{box-shadow:none}
+.chosen h3{font-family:var(--display);font-weight:400;font-size:30px;line-height:1.1}
+.chosen .who{color:var(--on-wood-2);margin-top:4px}
+.opts{list-style:none;margin-top:18px}
+.opt{display:flex;gap:14px;align-items:center;padding:13px 0;border-bottom:1px solid var(--wood-line);cursor:pointer}
+.opt input{appearance:none;width:22px;height:22px;border:1.5px solid var(--brass);border-radius:3px;display:grid;place-items:center;flex:none;cursor:pointer}
+.opt input:checked{background:var(--brass-face);border-color:transparent}
+.opt input:checked::after{content:"";width:10px;height:5px;border:2px solid #2a1c06;border-top:0;border-right:0;transform:translateY(-1px) rotate(-45deg)}
+.opt span{flex:1}
+.opt small{display:block;color:var(--on-wood-2);font-size:13px}
+.opt b{font-weight:500;color:var(--brass-hi);white-space:nowrap}
+.recap{background:var(--wood-dk);border:1px solid var(--wood-line);border-radius:3px;padding:22px}
+.recap h3{font-family:var(--display);font-weight:400;font-size:20px}
+.recap dl{margin-top:12px;display:grid;grid-template-columns:1fr auto;gap:0;font-size:14.5px}
+.recap dt,.recap dd{padding:7px 0;border-bottom:1px solid var(--wood-line)}
+.recap dt{color:var(--on-wood-2)}
+.recap dd{text-align:right}
+.recap .tot dt,.recap .tot dd{border:0;padding-top:12px}
+.recap .tot dd{font-family:var(--display);font-size:28px;color:var(--brass-hi)}
+.recap .btn{width:100%;margin-top:14px}
+
+/* Payment */
+.pay{display:grid;grid-template-columns:200px minmax(0,1fr) 340px;gap:40px;margin-top:28px;align-items:start}
+.methods{list-style:none;display:grid;gap:10px}
+.method{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center;padding:16px 18px;border:1px solid #cfccc2;border-radius:3px;background:#f6f5f1;cursor:pointer}
+.method:has(input:checked){border-color:var(--brass);box-shadow:inset 0 0 0 1px var(--brass);background:#fffdf7}
+.method input{appearance:none;width:20px;height:20px;border:1.5px solid #9a968a;border-radius:50%;display:grid;place-items:center;cursor:pointer}
+.method input:checked{border-color:var(--brass-lo)}
+.method input:checked::after{content:"";width:10px;height:10px;border-radius:50%;background:var(--brass)}
+.method b{font-weight:600}
+.method small{display:block;color:var(--on-plaster-2);font-size:13.5px}
+.cards{display:flex;gap:6px}
+.cardmark{font-size:11px;font-weight:600;letter-spacing:.06em;padding:5px 8px;border-radius:3px;color:#fff}
+.cardmark.cib{background:#1d4e89}.cardmark.edh{background:#c9a227;color:#2a1c06}
+.secure{display:flex;gap:10px;align-items:flex-start;margin-top:14px;font-size:14px;color:var(--on-plaster-2);max-width:60ch}
+.secure .ico{color:var(--wood)}
+.keytag{position:relative;background:var(--wood);color:var(--on-wood);border-radius:3px;padding:24px 22px 22px}
+.keytag .fob{width:150px;height:200px;margin:0 auto;background:var(--brass-face);border-radius:75px 75px 18px 18px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#2a1c06;box-shadow:inset 0 2px 0 rgba(255,244,214,.7),inset 0 -3px 0 rgba(90,60,14,.5),0 14px 24px -12px rgba(0,0,0,.6);position:relative;transform-origin:50% -20px;animation:swing 1.6s var(--ease) both}
+.keytag .fob::before{content:"";position:absolute;top:14px;width:18px;height:18px;border-radius:50%;background:var(--wood);box-shadow:inset 0 2px 3px rgba(0,0,0,.5)}
+.fob .no{font-size:52px;padding:0;line-height:1}
+.fob small{font-family:var(--display);letter-spacing:.2em;font-size:13px;margin-top:6px}
+.keytag h3{font-family:var(--display);font-weight:400;font-size:22px;text-align:center;margin-top:18px}
+.keytag ul{list-style:none;margin-top:10px;font-size:14px}
+.keytag li{display:flex;gap:10px;align-items:center;padding:7px 0;border-bottom:1px solid var(--wood-line);color:var(--on-wood-2)}
+.keytag li .ico{color:var(--brass-hi);width:18px;height:18px}
+
+/* Footer */
+.foot{padding-block:36px;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;font-size:14px;color:var(--on-wood-2);border-top:1px solid var(--wood-line)}
+.demo{background:var(--wood-dk);color:var(--on-wood-2);font-size:12.5px;text-align:center;padding:8px 16px}
+
+@media (max-width:1100px){
+  .flow,.pay{grid-template-columns:1fr 320px}
+  .steps{grid-column:1/-1;display:flex;gap:18px}
+  .steps li{border:0;padding:0}
+}
+@media (max-width:860px){
+  .wrap{width:calc(100% - 32px)}
+  .nav{display:none}
+  .hero{grid-template-columns:1fr;gap:28px;padding-top:28px}
+  .corridor{grid-template-columns:repeat(4,46%);overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;padding:16px 16px 0}
+  .door{scroll-snap-align:start}
+  .rooms{grid-template-columns:1fr}
+  .room{grid-template-columns:120px 1fr}
+  .practical,.flow,.pay{grid-template-columns:1fr;gap:28px}
+  .facts{grid-template-columns:1fr}
+  .chosen{grid-template-columns:1fr;gap:18px}
+  .chosen .frame{display:none}
+  .head{flex-direction:column;align-items:start}
+  .top-end .open24 span{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<div class="demo">Maquette de démonstration · numéros de chambre, disponibilités et prix fictifs · photos d'illustration, remplacées par celles de l'hôtel</div>
+
+<!-- Accueil -->
+<section id="accueil">
+  <div class="wrap">
+    <header class="top">
+      <a class="plaque mark" href="#accueil" aria-label="Hôtel Concorde, accueil">CONCORDE</a>
+      <nav class="nav" aria-label="Principale">
+        <a href="#chambres">Chambres</a><a href="#pratique">Services</a><a href="#pratique">Accès</a><a href="#reserver">Réserver</a>
+      </nav>
+      <div class="top-end">
+        <div class="langs" role="group" aria-label="Langue">
+          <button aria-pressed="true">FR</button><button lang="ar" title="Version arabe">ع</button><button title="Version anglaise">EN</button>
+        </div>
+        <span class="open24"><i aria-hidden="true"></i><span>Réservation ouverte 24 h/24</span></span>
+      </div>
+    </header>
+
+    <div class="hero">
+      <div>
+        <h1>Hôtel Concorde, Oran. <em>Choisissez votre porte, à toute heure.</em></h1>
+        <p class="sub">Au rond-point Dar El Beida. Chambres individuelles, doubles et triples, petit-déjeuner et parking. Vous voyez ce qui est libre, vous réservez, vous payez par CIB ou Edahabia.</p>
+        <form class="book" id="book" onsubmit="return false">
+          <div class="field"><label for="in">Arrivée</label><input id="in" type="date" value="2026-11-12" min="2026-10-28"></div>
+          <div class="field"><label for="out">Départ</label><input id="out" type="date" value="2026-11-14" min="2026-10-29"></div>
+          <div class="field"><label for="pax">Personnes</label><select id="pax"><option>1</option><option selected>2</option><option>3</option></select></div>
+          <button class="btn" id="look" type="submit">Voir les portes libres</button>
+        </form>
+        <div class="book-meta"><span><b class="num" id="nights">2 nuits</b> · <span id="freeCount">3 portes libres</span> sur ces dates</span><span>Confirmation par SMS et e-mail</span></div>
+      </div>
+
+      <div>
+        <div class="corridor" id="corridor" aria-label="Chambres et disponibilité"></div>
+        <div class="legend"><span>Touchez une porte libre pour l'ouvrir.</span><span>Disponibilités de démonstration</span></div>
+      </div>
+    </div>
+  </div>
+  <div style="height:56px"></div>
+</section>
+
+<!-- Chambres -->
+<section id="chambres" class="band plaster">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <h2 class="h2">Trois façons de dormir au Concorde.</h2>
+        <p class="lede">Chaque chambre a sa salle de bain, une télévision écran plat et l'internet. Le petit-déjeuner s'ajoute en un geste.</p>
+      </div>
+      <a class="btn ghost" href="#accueil" style="color:var(--brass-lo)">Changer les dates</a>
+    </div>
+    <div class="rooms">
+      <article class="room">
+        <div class="frame"><span class="plaque num">101</span><img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&q=70" alt="Chambre d'hôtel avec lit individuel (photo d'illustration)" ></div>
+        <div>
+          <h3>Individuelle</h3><p class="who">1 personne · lit simple</p>
+          <ul class="incl">
+            <li><svg class="ico" viewBox="0 0 24 24"><path d="M4 7h16v10H4zM4 11h16M8 7V5h8v2"/></svg>Salle de bain privée</li>
+            <li><svg class="ico" viewBox="0 0 24 24"><path d="M3 9a13 13 0 0 1 18 0M6.5 12.5a8 8 0 0 1 11 0M10 16a3 3 0 0 1 4 0"/><circle cx="12" cy="19" r=".6"/></svg>Internet</li>
+            <li><svg class="ico" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="12" rx="1"/><path d="M8 21h8"/></svg>Télévision écran plat</li>
+          </ul>
+          <p class="price"><b class="num">5&nbsp;500 DA</b><span>la nuit, exemple</span></p>
+          <a class="btn" href="#reserver">Choisir</a>
+        </div>
+      </article>
+      <article class="room">
+        <div class="frame"><span class="plaque num">104</span><img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=600&q=70" alt="Chambre double (photo d'illustration)" ></div>
+        <div>
+          <h3>Double</h3><p class="who">2 personnes · grand lit ou deux lits</p>
+          <ul class="incl">
+            <li><svg class="ico" viewBox="0 0 24 24"><path d="M4 7h16v10H4zM4 11h16M8 7V5h8v2"/></svg>Salle de bain privée</li>
+            <li><svg class="ico" viewBox="0 0 24 24"><path d="M3 9a13 13 0 0 1 18 0M6.5 12.5a8 8 0 0 1 11 0M10 16a3 3 0 0 1 4 0"/><circle cx="12" cy="19" r=".6"/></svg>Internet</li>
+            <li><svg class="ico" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="12" rx="1"/><path d="M8 21h8"/></svg>Télévision écran plat</li>
+          </ul>
+          <p class="price"><b class="num">7&nbsp;500 DA</b><span>la nuit, exemple</span></p>
+          <a class="btn" href="#reserver">Choisir</a>
+        </div>
+      </article>
+      <article class="room">
+        <div class="frame"><span class="plaque num">203</span><img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=600&q=70" alt="Chambre triple (photo d'illustration)" ></div>
+        <div>
+          <h3>Triple</h3><p class="who">3 personnes · familles</p>
+          <ul class="incl">
+            <li><svg class="ico" viewBox="0 0 24 24"><path d="M4 7h16v10H4zM4 11h16M8 7V5h8v2"/></svg>Salle de bain privée</li>
+            <li><svg class="ico" viewBox="0 0 24 24"><path d="M3 9a13 13 0 0 1 18 0M6.5 12.5a8 8 0 0 1 11 0M10 16a3 3 0 0 1 4 0"/><circle cx="12" cy="19" r=".6"/></svg>Internet</li>
+            <li><svg class="ico" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="12" rx="1"/><path d="M8 21h8"/></svg>Télévision écran plat</li>
+          </ul>
+          <p class="price"><b class="num">9&nbsp;000 DA</b><span>la nuit, exemple</span></p>
+          <a class="btn" href="#reserver">Choisir</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Pratique -->
+<section id="pratique" class="band">
+  <div class="wrap practical">
+    <div>
+      <h2 class="h2">Ce qui est compris, sans surprise à l'arrivée.</h2>
+      <ul class="facts">
+        <li><svg class="ico" viewBox="0 0 24 24"><path d="M5 10h12v4a5 5 0 0 1-5 5h-2a5 5 0 0 1-5-5zM17 11h1.5a2.5 2.5 0 0 1 0 5H17M8 3v3M12 3v3"/></svg>Petit-déjeuner, en option</li>
+        <li><svg class="ico" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M10 16V8h3a2.5 2.5 0 0 1 0 5h-3"/></svg>Parking</li>
+        <li><svg class="ico" viewBox="0 0 24 24"><path d="M3 9a13 13 0 0 1 18 0M6.5 12.5a8 8 0 0 1 11 0M10 16a3 3 0 0 1 4 0"/><circle cx="12" cy="19" r=".6"/></svg>Internet dans les chambres</li>
+        <li><svg class="ico" viewBox="0 0 24 24"><path d="M4 7h16v10H4zM4 11h16M8 7V5h8v2"/></svg>Salle de bain privée</li>
+        <li><svg class="ico" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="12" rx="1"/><path d="M8 21h8"/></svg>Télévision écran plat</li>
+        <li><svg class="ico" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg>Paiement CIB et Edahabia sécurisé</li>
+      </ul>
+    </div>
+    <div class="addr">
+      <span class="plaque">ACCÈS</span>
+      <address>Rond-point Dar El Beida<br>Oran, Algérie</address>
+      <p>La réception vous répond par téléphone et WhatsApp ; la réservation en ligne, elle, ne ferme jamais.</p>
+      <div class="row">
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&query=H%C3%B4tel+Concorde+Dar+El+Beida+Oran" target="_blank" rel="noopener">Itinéraire</a>
+        <a class="btn ghost" href="#accueil">WhatsApp de la réception</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Réserver : étape 2 -->
+<section id="reserver" class="band" style="background:var(--wood-dk)">
+  <div class="wrap">
+    <h2 class="h2">La chambre <span class="num" id="rNo">104</span> est à vous.</h2>
+    <p class="lede">Ajoutez ce qu'il vous faut ; le total se met à jour avant le paiement.</p>
+    <div class="flow">
+      <ol class="steps"><li class="done">Dates</li><li class="now">Chambre</li><li>Paiement</li></ol>
+      <div class="chosen">
+        <div class="frame"><span class="plaque num" id="rNo2">104</span><img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=500&q=70" alt="Chambre double (photo d'illustration)"></div>
+        <div>
+          <h3 id="rType">Double</h3>
+          <p class="who"><span id="rDates">12 → 14 novembre 2026</span> · <span id="rPax">2 personnes</span></p>
+          <ul class="opts">
+            <li><label class="opt"><input type="checkbox" id="xBreak" checked><span>Petit-déjeuner<small>servi chaque matin, par personne</small></span><b class="num">+ 600 DA</b></label></li>
+            <li><label class="opt"><input type="checkbox" id="xBed"><span>Lit supplémentaire<small>pour un enfant</small></span><b class="num">+ 1&nbsp;500 DA</b></label></li>
+            <li><label class="opt"><input type="checkbox" id="xLate"><span>Départ tardif<small>jusqu'à 15 h, selon disponibilité</small></span><b class="num">+ 2&nbsp;000 DA</b></label></li>
+          </ul>
+        </div>
+      </div>
+      <aside class="recap" aria-live="polite">
+        <h3>Votre séjour</h3>
+        <dl>
+          <dt>Chambre <span class="num" id="cNo">104</span>, <span id="cNights">2 nuits</span></dt><dd class="num" id="cRoom">15 000</dd>
+          <dt>Options</dt><dd class="num" id="cOpt">2 400</dd>
+          <div class="tot" style="display:contents"><dt>Total, en dinars</dt><dd class="num" id="cTot">17 400</dd></div>
+        </dl>
+        <a class="btn" href="#paiement">Continuer vers le paiement</a>
+        <p class="note" style="margin-top:10px">Prix d'exemple : l'hôtel fixe ses tarifs par saison et week-end.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- Paiement : étape 3 -->
+<section id="paiement" class="band plaster">
+  <div class="wrap">
+    <h2 class="h2">Payez comme vous voulez, en dinars.</h2>
+    <p class="lede">Par carte CIB ou Edahabia, en entier ou en acompte, ou à l'arrivée si vous venez de l'étranger.</p>
+    <div class="pay">
+      <ol class="steps"><li class="done">Dates</li><li class="done">Chambre</li><li class="now">Paiement</li></ol>
+      <div>
+        <ul class="methods">
+          <li><label class="method"><input type="radio" name="m" checked><span><b>Payer maintenant</b><small>Le séjour est réglé, rien à payer à l'arrivée</small></span><span class="cards"><span class="cardmark cib">CIB</span><span class="cardmark edh">EDAHABIA</span></span></label></li>
+          <li><label class="method"><input type="radio" name="m"><span><b>Payer un acompte de 30 %</b><small>Le reste à la réception</small></span><b class="num">5&nbsp;220 DA</b></label></li>
+          <li><label class="method"><input type="radio" name="m"><span><b>Payer à l'arrivée</b><small>Pour les cartes étrangères ; chambre garantie jusqu'à 18 h</small></span><span></span></label></li>
+        </ul>
+        <p class="secure"><svg class="ico" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="1"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Vous saisissez votre carte sur la page sécurisée du prestataire de paiement agréé. L'hôtel ne voit jamais votre numéro de carte.</p>
+        <a class="btn" href="#paiement" style="margin-top:18px">Payer <span class="num" id="pTot">17 400</span> DA</a>
+      </div>
+      <aside class="keytag">
+        <div class="fob"><span class="no num" id="kNo">104</span><small>CONCORDE</small></div>
+        <h3>Réservation confirmée</h3>
+        <ul>
+          <li><svg class="ico" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="1"/><path d="M4 10h16M9 3v4M15 3v4"/></svg><span id="kDates">12 → 14 novembre 2026</span></li>
+          <li><svg class="ico" viewBox="0 0 24 24"><path d="M4 6h16v12H4zM4 7l8 6 8-6"/></svg>SMS et e-mail envoyés</li>
+          <li><svg class="ico" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>Lien pour modifier ou annuler</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<footer class="wrap foot">
+  <span>Hôtel Concorde · Rond-point Dar El Beida, Oran</span>
+  <span>Réservation en ligne ouverte 24 h/24 · CIB · Edahabia</span>
+</footer>
+
+<script>
+const rooms=[
+  {no:'101',type:'Individuelle',cap:1,price:5500},
+  {no:'102',type:'Double',cap:2,price:7500},
+  {no:'103',type:'Double',cap:2,price:7500},
+  {no:'104',type:'Double',cap:2,price:7500},
+];
+const $=s=>document.querySelector(s);
+const fmt=n=>n.toLocaleString('fr-FR').replace(/ | /g,' ');
+const months=['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];
+let chosen=rooms[3];
+
+function nights(){const a=new Date($('#in').value),b=new Date($('#out').value);return Math.max(1,Math.round((b-a)/864e5)||1)}
+function taken(no){ // deterministic demo availability per date range
+  const s=$('#in').value+$('#out').value+no;let h=0;for(const c of s)h=(h*31+c.charCodeAt(0))>>>0;return h%3===0}
+function dates(){const a=new Date($('#in').value),b=new Date($('#out').value);
+  return a.getMonth()===b.getMonth()?`${a.getDate()} → ${b.getDate()} ${months[b.getMonth()]} ${b.getFullYear()}`:`${a.getDate()} ${months[a.getMonth()]} → ${b.getDate()} ${months[b.getMonth()]}`}
+
+function hang(animate){
+  const pax=+$('#pax').value;let free=0;
+  $('#corridor').innerHTML='';
+  rooms.forEach(r=>{
+    const busy=taken(r.no)||r.cap<pax&&r.cap===1;
+    if(!busy)free++;
+    const d=document.createElement('button');
+    d.type='button';d.className='door'+(busy?' is-taken':'')+(r===chosen&&!busy?'':'');d.disabled=busy;
+    d.setAttribute('aria-label',`Chambre ${r.no}, ${r.type}, ${busy?'occupée':'libre'}`);
+    d.innerHTML=`<span class="inside" style="background-image:url(https://images.unsplash.com/photo-1590490360182-c33d57733427?w=300&q=60)"></span>
+      <span class="leaf"><span class="plaque no num">${r.no}</span><span class="knob"></span>
+      <span class="tag ${busy?'taken':'free'}${animate?' swing':''}">${busy?'Ne pas<br>déranger':'Libre'}</span>
+      <span class="type">${r.type}</span></span>`;
+    if(!busy)d.addEventListener('click',()=>{chosen=r;d.classList.add('open');update();setTimeout(()=>location.hash='#reserver',700)});
+    $('#corridor').appendChild(d);
+  });
+  $('#freeCount').textContent=`${free} porte${free>1?'s':''} libre${free>1?'s':''}`;
+}
+function update(){
+  const n=nights(),pax=+$('#pax').value;
+  $('#nights').textContent=`${n} nuit${n>1?'s':''}`;
+  const room=chosen.price*n;
+  const opt=($('#xBreak').checked?600*pax*n:0)+($('#xBed').checked?1500*n:0)+($('#xLate').checked?2000:0);
+  for(const id of ['#rNo','#rNo2','#cNo','#kNo'])$(id).textContent=chosen.no;
+  $('#rType').textContent=chosen.type;
+  $('#rDates').textContent=$('#kDates').textContent=dates();
+  $('#rPax').textContent=`${pax} personne${pax>1?'s':''}`;
+  $('#cNights').textContent=`${n} nuit${n>1?'s':''}`;
+  $('#cRoom').textContent=fmt(room);$('#cOpt').textContent=fmt(opt);
+  $('#cTot').textContent=$('#pTot').textContent=fmt(room+opt);
+}
+['#in','#out','#pax'].forEach(s=>$(s).addEventListener('change',()=>{hang(true);update()}));
+['#xBreak','#xBed','#xLate'].forEach(s=>$(s).addEventListener('change',update));
+$('#look').addEventListener('click',()=>{hang(true);update()});
+hang(false);update();
+addEventListener('load',()=>{document.body.dataset.offsets=['accueil','chambres','reserver','paiement'].map(id=>id+':'+Math.round(document.getElementById(id).getBoundingClientRect().top+scrollY)).join(',')});
+</script>
+</body>
+</html>
